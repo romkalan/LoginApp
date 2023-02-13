@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = userName
-        setGradientBackground(colorTop: .cyan, andColorBottom: .magenta)
+        setGradientBackground(colorTop: .systemPink, andColorBottom: .systemBlue)
     }
     
     private func setGradientBackground(colorTop firstColor: UIColor, andColorBottom secondColor: UIColor) {
