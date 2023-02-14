@@ -10,12 +10,11 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var backgroundGradientView: UIView!
     var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = userName
+        userNameLabel.text = "Welcome, \(userName ?? "")!"
         setGradientBackground(colorTop: .systemPink, andColorBottom: .systemBlue)
     }
     
@@ -26,11 +25,10 @@ class WelcomeViewController: UIViewController {
         let colorBottom = secondColor
         
         gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
-        gradientLayer.frame = self.view.bounds
+        gradientLayer.frame = view.bounds
         gradientLayer.shouldRasterize = true
-        backgroundGradientView.layer.addSublayer(gradientLayer)
-                
-        self.view.layer.insertSublayer(gradientLayer, at:0)
+        view.layer.addSublayer(gradientLayer)
+        view.layer.insertSublayer(gradientLayer, at:0)
     }
 
 }

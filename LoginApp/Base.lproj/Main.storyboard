@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-Hf-zmU">
-                                <rect key="frame" x="16" y="204" width="288" height="175.5"/>
+                                <rect key="frame" x="16" y="184" width="288" height="175.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="dlq-DC-zvX">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="131.5"/>
@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fgV-Hf-zmU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="0aq-fw-MSz"/>
+                            <constraint firstItem="fgV-Hf-zmU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="0aq-fw-MSz"/>
                             <constraint firstItem="fgV-Hf-zmU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PHd-QM-1OX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fgV-Hf-zmU" secondAttribute="trailing" constant="16" id="pbc-Up-jk3"/>
                         </constraints>
@@ -140,7 +140,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundGradientView" destination="N1W-pv-hzq" id="5aQ-EO-3Lf"/>
                         <outlet property="userNameLabel" destination="ZUe-TI-70a" id="399-dJ-b8u"/>
                     </connections>
                 </viewController>
@@ -155,7 +154,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="May-P0-EHN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xmu-VY-IuZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
