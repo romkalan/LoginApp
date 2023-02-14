@@ -36,7 +36,6 @@ final class LoginViewController: UIViewController {
                 withTitle: "Invalid Login or Password",
                 andMessage: "Please, enter correct login and password"
             )
-            passwordTF.text = ""
             return
         }
 
@@ -45,7 +44,6 @@ final class LoginViewController: UIViewController {
                 withTitle: "Invalid Login or Password",
                 andMessage: "Please, enter correct login and password"
             )
-            passwordTF.text = ""
             return
         }
     }
@@ -72,10 +70,9 @@ extension LoginViewController {
             message: message,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(
-            title: "OK",
-            style: .default
-        )
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.passwordTF.text = ""
+            }
         
         alert.addAction(okAction)
         present(alert, animated: true)
