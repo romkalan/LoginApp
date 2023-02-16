@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD495356299E8F290018C1BD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD495355299E8F290018C1BD /* TabBarViewController.swift */; };
+		AD019260299ED582004ED90C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01925F299ED582004ED90C /* TabBarViewController.swift */; };
 		AD49535C299EBEF00018C1BD /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49535B299EBEF00018C1BD /* BioViewController.swift */; };
 		ADA486F1299A4E9F00384EC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA486F0299A4E9F00384EC7 /* AppDelegate.swift */; };
 		ADA486F3299A4E9F00384EC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA486F2299A4E9F00384EC7 /* SceneDelegate.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD495355299E8F290018C1BD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AD01925F299ED582004ED90C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		AD49535B299EBEF00018C1BD /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		ADA486ED299A4E9F00384EC7 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA486F0299A4E9F00384EC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				ADA486F4299A4E9F00384EC7 /* LoginViewController.swift */,
 				ADA48704299A61F100384EC7 /* WelcomeViewController.swift */,
 				ADC4397E299E5A5C00EDA0E7 /* UserViewController.swift */,
-				AD495355299E8F290018C1BD /* TabBarViewController.swift */,
+				AD01925F299ED582004ED90C /* TabBarViewController.swift */,
 				ADB91A98299EC77500505B41 /* PetViewController.swift */,
 				AD49535B299EBEF00018C1BD /* BioViewController.swift */,
 			);
@@ -191,8 +191,8 @@
 				ADA486F5299A4E9F00384EC7 /* LoginViewController.swift in Sources */,
 				ADB91A99299EC77500505B41 /* PetViewController.swift in Sources */,
 				ADC4397F299E5A5C00EDA0E7 /* UserViewController.swift in Sources */,
-				AD495356299E8F290018C1BD /* TabBarViewController.swift in Sources */,
 				AD49535C299EBEF00018C1BD /* BioViewController.swift in Sources */,
+				AD019260299ED582004ED90C /* TabBarViewController.swift in Sources */,
 				ADA48705299A61F100384EC7 /* WelcomeViewController.swift in Sources */,
 				ADA486F1299A4E9F00384EC7 /* AppDelegate.swift in Sources */,
 				ADC4397B299E390600EDA0E7 /* User.swift in Sources */,
