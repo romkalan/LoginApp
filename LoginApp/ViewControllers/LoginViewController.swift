@@ -22,10 +22,25 @@ final class LoginViewController: UIViewController {
         logInButton.layer.cornerRadius = 10
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.name = user.person.name
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user.person.name
+            } else if let userNavigationVC = viewController as? UINavigationController {
+                guard let userVC = userNavigationVC.topViewController as? UserViewController else { return }
+                userVC.title = user.person.name + " " + user.person.surName
+                userVC.name = user.person.name
+                userVC.surName = user.person.surName
+                userVC.age = user.person.age
+                userVC.biography = user.person.biography
+                userVC.petName = user.person.pet.name
+                userVC.petToy = user.person.pet.toy
+            }
+        }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

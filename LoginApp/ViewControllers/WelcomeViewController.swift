@@ -7,16 +7,16 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     @IBOutlet var userNameLabel: UILabel!
     
-    private let user = User.getUserInformation()
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "Welcome, \(user.person.name)!"
-        view.setGradientBackground(colorTop: .systemPink, colorBottom: .systemBlue)
+        userNameLabel.text = "Welcome, \(user)!"
+        view.setGradientBackground(colorTop: .opaqueSeparator, colorBottom: .systemMint)
     }
 }
 
