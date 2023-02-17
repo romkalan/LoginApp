@@ -13,13 +13,12 @@ class PetViewController: UIViewController {
     @IBOutlet var petNameLabel: UILabel!
     @IBOutlet var petToyLabel: UILabel!
     
-    var petName = ""
-    var petToy = ""
+    var pet: Pet!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        petNameLabel.text = petName
-        petToyLabel.text = petToy
+        petNameLabel.text = pet.name
+        petToyLabel.text = pet.toy
         view.setGradientBackground(colorTop: .opaqueSeparator, colorBottom: .systemMint)
     }
     

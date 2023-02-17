@@ -13,7 +13,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var logInButton: UIButton!
     
-    private let user = User.getUserInformation()
+    let user = User.getUserInformation()
     
     override func viewDidLoad() {
         userNameTF.text = user.userName
@@ -28,16 +28,11 @@ final class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = user.person.name
+                welcomeVC.user = user
             } else if let userNavigationVC = viewController as? UINavigationController {
                 guard let userVC = userNavigationVC.topViewController as? UserViewController else { return }
                 userVC.title = user.person.name + " " + user.person.surName
-                userVC.name = user.person.name
-                userVC.surName = user.person.surName
-                userVC.age = user.person.age
-                userVC.biography = user.person.biography
-                userVC.petName = user.person.pet.name
-                userVC.petToy = user.person.pet.toy
+                userVC.person = user.person
             }
         }
     }
