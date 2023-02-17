@@ -14,14 +14,14 @@ final class UserViewController: UIViewController {
     @IBOutlet var surNameLabel: UILabel!
     @IBOutlet var ageUserLabel: UILabel!
     
-    var person: Person!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = person.name + " " + person.surName
-        userNameLabel.text = person.name
-        surNameLabel.text = person.surName
-        ageUserLabel.text = String(person.age)
+        navigationItem.title = user.person.name + " " + user.person.surName
+        userNameLabel.text = user.person.name
+        surNameLabel.text = user.person.surName
+        ageUserLabel.text = String(user.person.age)
         view.setGradientBackground(colorTop: .opaqueSeparator, colorBottom: .systemMint)
     }
     
@@ -31,7 +31,7 @@ final class UserViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bioVC = segue.destination as? BioViewController else { return }
-            bioVC.person = person
+            bioVC.user = user
     }
 }
 
