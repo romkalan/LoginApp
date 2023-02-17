@@ -18,6 +18,7 @@ final class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = person.name + " " + person.surName
         userNameLabel.text = person.name
         surNameLabel.text = person.surName
         ageUserLabel.text = String(person.age)
@@ -29,10 +30,8 @@ final class UserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let bioVC = segue.destination as? BioViewController {
-            bioVC.navigationItem.title = (person?.name ?? "") + " " + (person?.surName ?? "")
+        guard let bioVC = segue.destination as? BioViewController else { return }
             bioVC.person = person
-        }
     }
 }
 

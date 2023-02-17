@@ -17,6 +17,7 @@ class PetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = pet.name
         petNameLabel.text = pet.name
         petToyLabel.text = pet.toy
         view.setGradientBackground(colorTop: .opaqueSeparator, colorBottom: .systemMint)

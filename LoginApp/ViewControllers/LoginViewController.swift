@@ -28,10 +28,9 @@ final class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = user
+                welcomeVC.person = user.person
             } else if let userNavigationVC = viewController as? UINavigationController {
                 guard let userVC = userNavigationVC.topViewController as? UserViewController else { return }
-                userVC.title = user.person.name + " " + user.person.surName
                 userVC.person = user.person
             }
         }

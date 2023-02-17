@@ -15,15 +15,14 @@ class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = person.name + " " + person.surName
         biographyLabel.text = person.biography
         view.setGradientBackground(colorTop: .opaqueSeparator, colorBottom: .systemMint)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let petVC = segue.destination as? PetViewController {
-            petVC.navigationItem.title = person?.pet.name
-            petVC.pet = person?.pet
-        }
+        guard let petVC = segue.destination as? PetViewController else { return }
+            petVC.pet = person.pet
     }
 }
 
