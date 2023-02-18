@@ -13,12 +13,12 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var logInButton: UIButton!
     
-    let user = User.getUserInformation()
+    private let user = User.getUserInformation()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         userNameTF.text = user.userName
         passwordTF.text = user.password
-        super.viewDidLoad()
         logInButton.layer.cornerRadius = 10
     }
     
@@ -67,8 +67,8 @@ extension LoginViewController {
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                self.passwordTF.text = ""
-            }
+            self.passwordTF.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
